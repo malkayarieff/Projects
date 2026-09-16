@@ -1,3 +1,4 @@
+rd · MD
 Amazon Sales Dashboard
 
 A Streamlit dashboard that explores the Amazon Sales Dataset (Kaggle) — looking at product categories, prices, discounts, and ratings.
@@ -36,6 +37,3 @@ Products per category
 Average rating by category
 Actual vs. discounted price for the most-discounted products
 Rating vs. discounted price (do higher ratings mean higher prices?)
-AI Use
-
-I used Claude at a few points while building this: to understand why fields like discount_percentage and rating wouldn't convert to numbers directly, to get a first pass at the cleaning code, and to compare chart-type options for the category and rating questions (a pie chart was suggested for the 9+ categories but rejected for readability in favor of a horizontal bar chart). Every suggestion was checked against the actual cleaned data before being kept — the row-count-before/after logic and each chart's written takeaway were rewritten based on the real output rather than left as a generic first draft.
