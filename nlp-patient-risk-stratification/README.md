@@ -7,7 +7,12 @@ This project builds an NLP-driven patient risk stratification system using one y
 
 ## Data
 
-Not included in this repo — the source files (nursing notes, diagnosis records, medication records) contain real patient information from a long-term care facility and are excluded for privacy. See `Data Dictionary.pdf` for field-level documentation of what the data contained.
+The dataset is an anonymized set of nursing notes, diagnosis records, and medication records from a long-term care facility, provided with permission for use in this project. See `Data Dictionary.pdf` for field-level documentation.
+
+- `diagnosis.csv` — ICD-10 diagnosis records
+- `medication.csv` — medication category records
+- `notes.csv` — nursing progress notes (free text)
+- `patient_risk_scores_full.csv` — output of the notebook: risk scores for all 6,845 patient assessments
 
 Scale: 2,153 patients · 215,460 nursing notes · 6,845 patient assessments
 
@@ -38,16 +43,18 @@ Scale: 2,153 patients · 215,460 nursing notes · 6,845 patient assessments
 
 - `Final_Code_EDA_Model.ipynb` — full pipeline: EDA, keyword scoring, trend detection, and model training/comparison
 - `dashboard_app.py` — Streamlit dashboard for per-patient and population-level risk monitoring
+- `diagnosis.csv`, `medication.csv`, `notes.csv` — source data
+- `patient_risk_scores_full.csv` — notebook output, used directly by the dashboard
 - `Data Dictionary.pdf` — field-level description of the source data
 - `README.md` — this file
 
 ## How to Run
 
-1. Clone the repository, or download `Final_Code_EDA_Model.ipynb` directly
+1. Clone the repository, or download the files directly
 2. Install dependencies: `pip install pandas numpy scikit-learn matplotlib seaborn wordcloud plotly streamlit`
-3. Open `Final_Code_EDA_Model.ipynb` in Jupyter Notebook, JupyterLab, or Google Colab
-4. Run all cells in order. The notebook expects `diagnosis.csv`, `medication.csv`, and `notes.csv` (not included — see Data above) and will generate `patient_risk_scores_full.csv` on completion
-5. To view the dashboard: put `dashboard_app.py` and the generated `patient_risk_scores_full.csv` in the same folder, then run `streamlit run dashboard_app.py`
+3. Open `Final_Code_EDA_Model.ipynb` in Jupyter Notebook, JupyterLab, or Google Colab, with `diagnosis.csv`, `medication.csv`, and `notes.csv` in the same folder
+4. Run all cells in order — this regenerates `patient_risk_scores_full.csv`
+5. To view the dashboard: put `dashboard_app.py` and `patient_risk_scores_full.csv` in the same folder, then run `streamlit run dashboard_app.py`
 
 ## References
 
