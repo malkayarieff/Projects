@@ -60,15 +60,3 @@ is too granular to chart cleanly.
   2. Average rating by category
   3. Actual vs. discounted price for the most-discounted products
   4. Rating vs. discounted price (do higher ratings mean higher prices?)
-
-## AI Use
-
-I used Claude at a few points while building this: to understand why fields
-like `discount_percentage` and `rating` wouldn't convert to numbers directly,
-to get a first pass at the cleaning code, and to compare chart-type options
-for the category and rating questions (a pie chart was suggested for the
-9+ categories but rejected for readability in favor of a horizontal bar
-chart). Every suggestion was checked against the actual cleaned data before
-being kept — the row-count-before/after logic and each chart's written
-takeaway were rewritten based on the real output rather than left as a
-generic first draft.
