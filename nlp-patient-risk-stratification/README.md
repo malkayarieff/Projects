@@ -46,6 +46,7 @@ This project builds an NLP-driven patient risk stratification system using one y
 ### 2. Run the Dashboard (Local)
 
 1. Install dependencies:
+
 ```bash
 pip install streamlit pandas plotly
 ```
@@ -53,12 +54,34 @@ pip install streamlit pandas plotly
 2. Put `dashboard_app.py` and `patient_risk_scores_full.csv` in the same folder
 
 3. Run:
+
 ```bash
 cd /path/to/folder
 streamlit run dashboard_app.py
 ```
 
 4. The dashboard opens automatically in your browser at `localhost:8501`
+
+---
+
+## Dependencies
+
+```
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+matplotlib>=3.7
+seaborn>=0.12
+wordcloud>=1.9
+plotly>=5.0
+streamlit>=1.37
+```
+
+Install all at once:
+
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn wordcloud plotly streamlit
+```
 
 ---
 
@@ -98,4 +121,8 @@ Nursing note content is the dominant predictor of patient risk classification. T
 
 ---
 
-## Dependencies
+## References
+
+- Li, S., Xiao, X., & Zhang, X. (2023). Hydration status in older adults. *Nutrients*, 15, 2609.
+- Ogbolu, M. O., Eniade, O. D., & Kozlovszky, M. (2025). Systematic review of risk factors for dehydration. *Healthcare*, 13, 1974.
+- Santiago González, N., et al. (2023). Modified Early Warning Score. *Healthcare*, 11, 2654.
